@@ -1,0 +1,62 @@
+.hero
+  text-align: center
+  background:
+    image: linear-gradient(rgba(248,187,22,.7), rgba(248,187,22,.7)), url('../images/homepage-hero.jpg')
+    repeat: no-repeat
+    size: cover
+    position: bottom
+  height: 100vh
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+  color: #fff
+  max-height: 1080px
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+
+
+.hero-center-wrapper
+  flex-basis: 100%
+  align-self: center
+
+.hero-center-subtitle
+  margin: 15px 0
+
+.hero-center-btn
+  margin: 15px 0
+
+.see-more-wrapper
+  flex-basis: 100%
+  align-self: flex-end
+
+
+.see-more
+  padding-bottom: 40px
+  display: block
+  margin: 0 auto
+  width: fit-content
+  &:after
+    display: none
+  &:before
+    content: ""
+    position: absolute
+    bottom: 25px
+    left: calc(50% - 6px)
+    width: 12px
+    height: 7.4px
+    transition: all 0.3s ease-in-out
+    background:
+      image: url("../images/arrow-down.png")
+      repeat: no-repeat
+      size: contain
+      position: center
+  &:hover
+    &:before
+      bottom: 20px
+
+.see-more-images
+  img
+    width: 37.1px
+    vertical-align: bottom
+    margin-right: 29px
+    &:last-of-type
+      margin-right: 0
