@@ -12,6 +12,12 @@
   display: flex
   justify-content: center
   flex-wrap: wrap
+  @media(max-width: 800px)
+    background:
+      image: linear-gradient(rgba(248,187,22,.7), rgba(248,187,22,.7)), url('../images/homepage-hero_mobile.jpg')
+      repeat: no-repeat
+      size: cover
+      position: bottom
 
 
 .hero-center-wrapper
@@ -34,6 +40,12 @@
   display: block
   margin: 0 auto
   width: fit-content
+  p
+    font-size: 20px
+    @media(max-width: 1980px)
+      font-size: 1vw
+    @media(max-width: $lg-max-width)
+      font-size: 16px
   &:after
     display: none
   &:before
@@ -60,3 +72,5 @@
     margin-right: 29px
     &:last-of-type
       margin-right: 0
+    @media(max-width: 350px)
+      margin-right: 10px

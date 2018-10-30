@@ -17,15 +17,43 @@
   vertical-align: middle
   @media(max-width: 1980px)
     width: 22.1vw
+  @media(max-width: 800px)
+    width: 145px
 
-.header-nav
+.header .header-nav
   display: inline-block
+  @media(max-width: 800px)
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    max-height: 100vh
+    overflow: scroll
+    background-color: $accent
+    height: 100vh
+    padding: 86px 0px
+
+.header .header-nav_mobile-active
+  display: block
+  z-index: 100
 
 .header-nav-item
   display: inline-block
   margin-right: 30px
   @media(max-width: 1980px)
     margin-right: 1.5vw
+  @media(max-width: 800px)
+    display: block
+    width: fit-content
+    margin: 0 auto 30px
+    touch-action: none
+    a
+      z-index: 2000
+      &:hover
+        &:after
+          display: none
+
 
 .header-btn-link
   min-width: fit-content
@@ -36,28 +64,36 @@
     padding: 1.3vw 1.4vw
   @media(max-width: $lg-max-width)
     font-size: 16px
+    padding: 9px 23px
+    width: auto
 
 .header-nav-item_parent
   position: relative
   padding-right: 17px
+  @media(max-width: 800px)
+    padding-right: 0
   &:hover
     .header-nav-item_parent-link
       &:after
         width: 100%
-  &:before
-    position: absolute
-    height: 100%
-    width: 12px
-    content: ""
-    top: 0
-    right: 0
-    @media(max-width: 1980px)
-      width: 0.6vw
-    background:
-      image: url("../images/arrow-down.png")
-      size: contain
-      position: center
-      repeat: no-repeat
+  &>a
+    &:before
+      position: absolute
+      height: 100%
+      width: 12px
+      content: ""
+      top: 0
+      right: -17px
+      @media(max-width: 1980px)
+        width: 0.6vw
+      @media(max-width: 800px)
+        width: 12px
+        right: -17px
+      background:
+        image: url("../images/arrow-down.png")
+        size: contain
+        position: center
+        repeat: no-repeat
 
 .header-subnav
   position: absolute
@@ -65,9 +101,15 @@
   left: 0
   display: none
   padding-top: 20px
+  @media(max-width: 800px)
+    position: static
+    width: 80vw
+    margin: 0 auto
+    .header-subnav-item
+      text-align: center
 
 
-.header-subnav_active
+.header-subnav_active, .header-subnav_mobile-active
   display: block
   z-index: 100
 
@@ -81,7 +123,7 @@
       color: white
   a
     padding: 15px
-    color: black
+    color: $black
     text-shadow: none
     display: block
     width: 100%

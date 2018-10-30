@@ -4,6 +4,12 @@
   margin: 0 auto
   display: flex
   align-items: stretch
+  @media(max-width: 800px)
+    display: block
+    .three-col-item
+      padding-right: 10px
+    .section-wrapper
+      padding-right: 0
   .three-col-item
     display: flex
     flex-direction: column
@@ -24,13 +30,18 @@
   box-shadow: -3px 4px 3px 0 rgba(0, 0, 0, 0.16)
   @media(max-width: 1098px)
     height: calc(100vw/3 - 27px)
+  @media(max-width: 800px)
+    width: 100%
+    height: calc(100vw/1.5 - 27px)
 
 .news-date
   font-style: italic
 
 .media-title
   min-height: 72px
+
 .news-title, .media-title
+  color: $black
   margin-top: 50px
   margin-bottom: 15px
   font-size: 30px
@@ -39,8 +50,12 @@
     font-size: 1.5vw
   @media(max-width: $lg-max-width)
     font-size: 18px
-  @media(max-width: 7800px)
+  @media(max-width: 800px)
     margin-top: 25px
+    min-height: 44px
 
 .media-section
   margin-bottom: 50px
+
+.media-link
+  display: none

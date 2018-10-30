@@ -8,6 +8,8 @@
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
   color: #fff
   padding: 100px 20px
+  @media(max-width: 800px)
+    padding: 45px 35px
 
 .footer-title
   margin-top: 30px
@@ -32,3 +34,13 @@
   a
     &:first-of-type
       margin-right: 30px
+
+.footer
+  .header-nav-item
+    display: block
+    width: fit-content
+    margin: 0 auto 18px
+  .header-nav-item_parent
+    padding-right: 0
+    &:before
+      right: -18px
