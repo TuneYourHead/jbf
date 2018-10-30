@@ -64,7 +64,7 @@ $(document).ready(function(){
 
   //dropdowm
   if (window.matchMedia('(min-width: 801px)').matches) {
-    $('.header-nav-item_parent, .menu-item-has-children, .header-nav-item_parent-link').hover(function(){
+    $('.header-nav-item_parent, .menu-item-has-children').hover(function(){
       $(this).find('.header-subnav').addClass('header-subnav_active');
       $(this).find('.sub-menu').addClass('header-subnav_active');
     }, function(){
